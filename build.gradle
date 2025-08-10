@@ -1,0 +1,36 @@
+plugins {
+    // Required for NeoGradle
+    id "org.jetbrains.gradle.plugin.idea-ext" version "1.1.7"
+    id 'net.neoforged.moddev' version '2.0.78' apply false
+}
+
+subprojects {
+
+    repositories {
+        maven {
+            name = "Jared's maven"
+            url = "https://maven.blamejared.com/"
+        }
+        maven {
+            url "https://www.cursemaven.com"
+            content {
+                includeGroup "curse.maven"
+            }
+        }
+        maven {
+            name = "Modrinth"
+            url = "https://api.modrinth.com/maven"
+            content {
+                includeGroup "maven.modrinth"
+
+            }
+        }
+        maven { url "https://maven.shedaniel.me" }
+        maven { url "https://maven.architectury.dev/" }
+        maven {
+            name = "TerraformersMC" //EMI
+            url = "https://maven.terraformersmc.com/"
+        }
+    }
+
+}
