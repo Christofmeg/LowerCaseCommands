@@ -68,6 +68,7 @@ tasks.register('publishCurseForge', TaskPublishCurseForge) {
         mainFile.addGameVersion("${it}")
     }
     mainFile.addModLoader('NeoForge')
+    mainFile.addOptional("catalogue")
 }
 
 modrinth {
